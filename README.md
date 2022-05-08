@@ -11,4 +11,7 @@ Az odalhoz tartozik egy **admin** jogosultságú felhasználó (ez firestore-ben
 
 (ha ezt nem teszed meg, akkor a cart oldal hibát fog dobni a localstorage miatt, valamiért az admin-nal való bejelentkezés ezt megoldja)
 
+Ha leosztályoztad és esetleg el akarod küldeni a pontszámot, akkor itt a Discord elérhetőségem:
+ - Darcosi#1867
+
 **Host**: https://diwhy-webshop.web.app
