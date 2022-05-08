@@ -1,7 +1,7 @@
 # diwhy-webshop.angular
 # Webfejlesztési keretrendszerek kötprog
 
-Ez a kötprog egy webshop, amin vendégként (regisztráció/belépés) is tudunk rendeléseket leadni, de ha regisztrált felhasználóként szeretnénk rendelni, akkor az oldal megjegyzi a rengisztrációnál megadott rendelési adatainkat.
+Ez a kötprog egy webshop, amin vendégként (regisztráció/belépés nélkül) is tudunk rendeléseket leadni, de ha regisztrált felhasználóként szeretnénk rendelni, akkor az oldal megjegyzi a rengisztrációnál megadott rendelési adatainkat.
 
 Az odalhoz tartozik egy **admin** jogosultságú felhasználó (ez firestore-ben egy isAdmin mezővel van megvalósítva), amelynek az alábbiak a belépési adatai:
  - **email**: admin@gmail.com
