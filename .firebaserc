@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "diwhy-webshop": {
+      "hosting": {
+        "diwhy-webshop": [
+          "diwhy-webshop"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "diwhy-webshop"
+  }
+}

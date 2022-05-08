@@ -1,0 +1,33 @@
+<div class="formDiv">
+    <h1 *ngIf="!id.value" class="display-4">Add new item!</h1>
+    <h1 *ngIf="id.value" class="display-4">Update item!</h1>
+    <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+
+
+        <input type="hidden" name="id" #id="ngModel" [(ngModel)]="service.formData.id">
+
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="name" #name="ngModel" [(ngModel)]="service.formData.name" placeholder="Item name" class="form-control" required>
+            <div *ngIf="name.invalid && name.touched" class="validation-error">Name is required!</div>
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="number" matInput name="price" #price="ngModel" [(ngModel)]="service.formData.price" placeholder="Item's price in HUF" class="form-control" required>
+            <div *ngIf="price.invalid && price.touched" class="validation-error">Price is required!</div>
+        </mat-form-field>
+
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="image" #image="ngModel" [(ngModel)]="service.formData.image" placeholder="Image URL" class="form-control" required>
+            <div *ngIf="image.invalid && image.touched" class="validation-error">Image is required!</div>
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <textarea type="text" matInput name="description" #description="ngModel" [(ngModel)]="service.formData.description" placeholder="Description..." class="form-control"></textarea>
+        </mat-form-field>
+    
+        <div class="form-group">
+            <button mat-raised-button color="primary" *ngIf="!id.value" type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Add item</button>
+            <button mat-raised-button color="primary" *ngIf="id.value" type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Update item</button>
+        </div>
+    </form>
+</div>

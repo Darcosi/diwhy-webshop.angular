@@ -1,0 +1,68 @@
+<div class="chooseDiv">
+    <h1 class="display-4">Home</h1>
+    <mat-form-field><p>Order by:</p>
+        <mat-select (selectionChange)="changeOrder()" [(ngModel)]="chosenOrder">
+            <mat-option *ngFor="let or of orderBys" [value]="or">{{or.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+
+<span *ngIf="loading" class="spinnerDiv">
+    <mat-spinner></mat-spinner>
+</span>
+
+<!-- <tr *ngFor="let i of lista">
+    <td>{{i.name}}</td>
+    <td><img height="100" src="{{i.image}}"></td>
+    <td>{{i.price}} Ft</td>
+    <td>{{i.description}}</td>
+    <td><a (click)="onEdit(i)" class="btn text-success">
+        <i class="bi bi-pencil-square"></i>
+    </a></td>
+    <td><a (click)="onDelete(i)" class="btn text-danger">
+        <i class="bi bi-trash"></i>
+    </a></td>
+</tr> -->
+
+<mat-card class="foam" *ngIf="!wannaFoam" (click)="changeToFoam(true)">
+    <mat-card-header>Check out our spray foam collection!</mat-card-header>
+</mat-card>
+<mat-card class="foam" *ngIf="wannaFoam" (click)="changeToFoam(false)">
+    <mat-card-header>Back to everything!</mat-card-header>
+</mat-card>
+<br>
+<div *ngIf="!wannaFoam" class="cardsDiv">
+    <mat-card *ngFor="let i of lista" >
+        <mat-card-header>
+            <mat-card-title>{{i.name}}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <img src="{{i.image}}">
+            <p>{{i.price}} Ft</p>
+            <p>{{i.description}}</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" (click)="addToCart(i)"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+
+<div *ngIf="wannaFoam" class="cardsDiv">
+    <mat-card *ngFor="let f of foamLista" >
+        <mat-card-header>
+            <mat-card-title>{{f.name}}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <img src="{{f.image}}">
+            <p>{{f.price}} Ft</p>
+            <p>{{f.description}}</p>
+        </mat-card-content>
+
+        <mat-card-actions>
+            <button mat-raised-button color="primary" type="submit" (click)="addToCart(f)"><mat-icon>add_shopping_cart</mat-icon>Add to cart</button>
+        </mat-card-actions>
+    </mat-card>
+</div>

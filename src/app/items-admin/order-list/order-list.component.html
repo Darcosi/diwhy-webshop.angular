@@ -1,0 +1,21 @@
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Items</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let o of oLista">
+            <td>{{o.name}}</td>
+            <td>{{o.address}}</td>
+            <td>{{o.email}}</td>
+            <td>{{o.phone}}</td>
+            <div *ngFor="let i of o.items">
+                <p>{{i.name}} - {{i.price}} Ft</p>
+            </div>
+        </tr>
+    </tbody>
+</table>

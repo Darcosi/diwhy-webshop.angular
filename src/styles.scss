@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+input.ng-touched.ng-invalid {
+    border-color: red;
+}
+
+div.validation-error {
+    width: 100%;
+    margin-top: .25rem;
+    font-size: 80%;
+    color: red;
+}
+html, body { height: 100%; }
+body { color: white; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.spinnerDiv {
+    display: flex;
+    justify-content: center;
+}

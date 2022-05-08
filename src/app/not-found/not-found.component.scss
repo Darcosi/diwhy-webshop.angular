@@ -1,0 +1,20 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-card {
+    height: 10em;
+    width: 20em;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}

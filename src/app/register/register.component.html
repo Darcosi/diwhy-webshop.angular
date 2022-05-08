@@ -1,0 +1,73 @@
+<!-- <h1 class="display-4">Register an account!</h1>
+<form #form="ngForm" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <input type="hidden" name="id">
+
+    <div class="form-group">
+        <input name="email" placeholder="Email address" class="form-control" required formControlName="email">
+    </div>
+
+    <div class="form-group">
+        <input name="password" placeholder="Password" class="form-control" required formControlName="password">
+    </div>
+
+    <div class="form-group">
+        <input name="name" placeholder="Full name" class="form-control" required formControlName="name">
+    </div>
+
+    <div class="form-group">
+        <input name="address" placeholder="Address" class="form-control" required formControlName="address">
+    </div>
+
+    <div class="form-group">
+        <input name="phone" placeholder="Phone number" class="form-control" required formControlName="phone">
+    </div>
+
+    <div class="form-group">
+        <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Register</button>
+    </div>
+</form> -->
+
+<div class="formDiv">
+    <h1 class="display-4">Register an account!</h1>
+    <form #form="ngForm" autocomplete="off" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <!-- <input type="hidden" name="id">
+    
+        <mat-form-field class="form-group"><mat-label>Email:</mat-label>
+            <input type="text" matInput name="email" placeholder="Email address" class="form-control" required formControlName="email">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group"><mat-label>Password:</mat-label>
+            <input type="password" matInput name="password" placeholder="Password" class="form-control" required formControlName="password">
+        </mat-form-field>
+    
+        <div class="form-group">
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Login</button>
+        </div> -->
+
+        <input type="hidden" name="id">
+
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="email" placeholder="Email address" class="form-control" required formControlName="email">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="password" matInput name="password" placeholder="Password" class="form-control" required formControlName="password">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="name" placeholder="Full name" class="form-control" required formControlName="name">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="address" placeholder="Address" class="form-control" required formControlName="address">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="phone" placeholder="Phone number" class="form-control" required formControlName="phone">
+        </mat-form-field>
+    
+        <div class="form-group">
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Register</button>
+        </div>
+    </form>
+</div>

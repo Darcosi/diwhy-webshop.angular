@@ -1,0 +1,28 @@
+<span *ngIf="loading" class="spinnerDiv">
+    <mat-spinner></mat-spinner>
+</span>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Description</th>
+        <th>Manage</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of lista">
+            <td>{{i.name}}</td>
+            <!-- <td>{{i.image}}</td> -->
+            <td><img height="100" src="{{i.image}}"></td>
+            <td>{{i.price}} Ft</td>
+            <td>{{i.description}}</td>
+            <td><a (click)="onEdit(i)" class="btn text-success">
+                <i class="bi bi-pencil-square"></i>
+            </a></td>
+            <td><a (click)="onDelete(i)" class="btn text-danger">
+                <i class="bi bi-trash"></i>
+            </a></td>
+        </tr>
+    </tbody>
+</table>

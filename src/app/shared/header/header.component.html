@@ -1,0 +1,8 @@
+<div fxLayoutGap="10px" fxLayout fxHide.xs>
+    <a routerLinkActive="active" routerLink="../home">Home</a>
+    <a routerLinkActive="active" routerLink="../cart">Cart ({{cartSize}})</a>
+    <a *ngIf="isReallyReallyAdmin" routerLinkActive="active" routerLink="../admin">Admin</a>
+    <a *ngIf="!(loggedInUser)" routerLinkActive="active" routerLink="../login">Login</a>
+    <a *ngIf="!(loggedInUser)" routerLinkActive="active" routerLink="../register">Register</a>
+    <a *ngIf="loggedInUser" (click)="logout()" routerLink="../login" style="background-color: red;">Logout</a>
+</div>

@@ -1,0 +1,51 @@
+<h1 class="display-4">Cart</h1>
+
+<table>
+    <thead>
+        <th>Name</th>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Remove</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let i of cartLista">
+            <td>{{i.name}}</td>
+            <td><img height="100" src="{{i.image}}"></td>
+            <td>{{i.price}} Ft</td>
+            <td><a (click)="onDelete(i)" class="btn text-danger">
+                <mat-icon color="red">remove_shopping_cart</mat-icon>
+            </a></td>
+        </tr>
+    </tbody>
+</table>
+<h2 class="right">Total: {{totalPrice}} Ft</h2>
+
+<div class="formDiv">
+    <h1 class="display-4">Order data</h1>
+    <form #form="ngForm" autocomplete="off" [formGroup]="orderForm" (ngSubmit)="onSubmit()">
+
+        <input type="hidden" name="id">
+
+        <input type="hidden" autocomplete="off" name="cart" value="{{cartLista}}" formControlName="cart">
+
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="email" placeholder="Email address" class="form-control" required formControlName="email">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="name" placeholder="Full name" class="form-control" required formControlName="name">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="address" placeholder="Address" class="form-control" required formControlName="address">
+        </mat-form-field>
+    
+        <mat-form-field class="form-group">
+            <input type="text" matInput name="phone" placeholder="Phone number" class="form-control" required formControlName="phone">
+        </mat-form-field>
+    
+        <div class="form-group">
+            <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">Order</button>
+        </div>
+    </form>
+</div>

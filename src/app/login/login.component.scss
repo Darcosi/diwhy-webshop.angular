@@ -1,0 +1,25 @@
+form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+mat-form-field {
+    width: 64%;
+}
+
+.formDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+    padding: 16px;
+}
+
+input {
+    font-size: 24px;
+}

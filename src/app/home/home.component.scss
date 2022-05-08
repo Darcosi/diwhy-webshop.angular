@@ -1,0 +1,47 @@
+.chooseDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cardsDiv {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+}
+
+mat-card {
+    width: 100%;
+}
+
+mat-card img {
+    width: 100%;
+}
+
+// mat-card * {
+//     white-space: pre-wrap;
+// }
+
+mat-card * {
+    // word-break: break-all;
+    white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+    .cardsDiv {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.foam {
+    cursor: pointer;
+    font-size: 64px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: normal;
+    background-image: url(../shared/foam.jpg);
+    color: black;
+}
